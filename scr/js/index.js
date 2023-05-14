@@ -1,5 +1,5 @@
 window.addEventListener("load", () => {
-	const darkMode = document.querySelector("#botao-alterar-tema");
+	const buttonTheme = document.querySelector("#botao-alterar-tema");
 	const tagBody = document.querySelector("body");
 	const themeSave = localStorage.getItem("theme");
 	const imgTheme = document.querySelector(".imagem-botao");
@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
 		imgTheme.setAttribute("src", "./imagens/moon.png");
 	}
 
-	darkMode.addEventListener("click", () => {
+	buttonTheme.addEventListener("click", () => {
 		if (!tagBody.classList?.contains("modo-escuro")) {
 			tagBody.classList?.add("modo-escuro");
 			localStorage.setItem("theme", "dark");
